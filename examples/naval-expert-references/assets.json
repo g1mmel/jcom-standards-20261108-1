@@ -1,0 +1,16 @@
+{
+  "gerald-r-ford-cvn": ["Gerald R Ford", "Ford", "Ford class", "CVN-78", "CVN 79", "John F Kennedy"],
+  "f35c-lightning2": ["F-35C", "F35C", "Lightning II carrier variant"],
+  "e2d-hawkeye": ["E-2D", "E2D", "Hawkeye", "Advanced Hawkeye", "E-2D Advanced Hawkeye"],
+  "us-navy-7m-rhib": ["7m RHIB", "7 m RHIB", "US Navy 7m RHIB", "7-meter RHIB"],
+  "arleigh-burke-ddg": ["Arleigh Burke", "Burke", "Burke DDG", "Burke class"],
+  "wasp-class-lhd": ["Wasp", "Wasp class", "Wasp LHD", "LHD-1", "USS Wasp"],
+  "saar-6-corvette": ["Sa'ar 6", "Saar 6", "Sa'ar-6", "Sa'ar 6 corvette"],
+  "m1-abrams": ["M1 Abrams", "Abrams", "M1A1", "M1A2", "Abrams tank"],
+  "lcac-hovercraft": ["LCAC", "Landing Craft Air Cushion"],
+  "fa-18ef-super-hornet": ["F/A-18E/F", "F/A-18E", "F/A-18F", "FA-18EF", "fa18ef-superhornet", "Super Hornet"],
+  "mh-60-seahawk": ["MH-60R", "MH-60S", "MH-60R/S", "Seahawk", "MH60R", "MH60S"],
+  "mh-60l-dap": ["MH-60L DAP", "MH60L DAP", "MH-60L", "Direct Action Penetrator"],
+  "cmv-22b-osprey": ["CMV-22B", "CMV22B", "CMV-22B Osprey"],
+  "carrier-tow-tractors": ["carrier tow tractors", "deck tow tractor", "A/S32A-31A", "AS32A-31A", "AS32A-31A tractor", "as32a-tow-tractor", "Shipboard Tow Tractor", "A/S32A-32", "MD-3", "MD3", "MD-3 tow tractor"]
+}

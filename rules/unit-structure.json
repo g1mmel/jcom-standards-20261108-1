@@ -1,0 +1,230 @@
+{
+  "_readme": "Unit structure contract for the parts pipeline and the M1/M2 gates. ADR-010: every threshold and every required part name lives here. tools/validators/unit-structure.mjs reads this file. A GLB is STRUCTURED only when the class parts are separate nodes, pivots sit on the real axis, moving parts are not welded to the hull, meshes are closed, the drawn size matches data/rules/unit-dimensions.json, local travel is -Z after manifest yawOffset, the mesh sits on y=0, triangles and textures are inside the unit-validator caps, and a material is named houseTint. Verdicts are STRUCTURED, PARTIAL, STATIC, BROKEN.",
+  "metadata": {
+    "version": "1.0.0",
+    "assumedDefault": true,
+    "lastUpdated": "2026-10-14",
+    "governingPolicy": "ADR-010",
+    "description": "Per-class part names, pivot rules, and the unit-validator triangle and texture budgets."
+  },
+  "verdicts": ["STRUCTURED", "PARTIAL", "STATIC", "BROKEN"],
+  "lodMarkers": ["lod0", "lod1", "lod2"],
+  "defaultBudget": "vehicle",
+  "forwardNames": ["barrel", "barrel_recoil", "nose", "bow", "blade", "cockpit", "cab", "gun", "cannon", "launcher", "rifle", "weapon", "door"],
+  "hintClass": {
+    "infantry": "infantry",
+    "structure": "building",
+    "defence": "defence",
+    "defense": "defence",
+    "aircraft": "jet",
+    "ship": "ship",
+    "naval": "ship"
+  },
+  "classify": [
+    { "class": "infantry", "re": "rifleman|infantry|red[-_ ]?guard|\\branger\\b|\\brebel\\b|\\bworker\\b|peacekeeper|sniper|\\bmedic\\b|engineer|shock[-_ ]?trooper" },
+    { "class": "submarine", "re": "submarine|seawolf|\\badir\\b" },
+    { "class": "helicopter", "re": "heli|apache|comanche|chinook|osprey|seahawk|venom|stallion|rotorcraft" },
+    { "class": "jet", "re": "aircraft|\\bjet\\b|\\bmig\\b|raptor|hornet|f-?35|hawkeye|warthog|lancer|spirit|growler" },
+    { "class": "ship", "re": "ship|destroyer|corvette|\\blhd\\b|landing[-_ ]?craft|\\brib\\b|lcac|\\bboat\\b|dvora|wasp|burke|\\bsaar\\b|carrier|mothership" },
+    { "class": "artillery", "re": "artillery|himars|tomahawk|inferno|rocket[-_ ]?buggy|\\bmrl\\b|\\bgrad\\b" },
+    { "class": "defence", "re": "defence|defense|patriot|stinger|phalanx|ciws|rapier|gattling[-_ ]?cannon|photon[-_ ]?cannon|nasams|shorad" },
+    { "class": "truck", "re": "supply[-_ ]?truck|cargo[-_ ]?hauler|\\btruck\\b" },
+    { "class": "tank", "re": "\\btank\\b|battlemaster|overlord|crusader|paladin|scorpion|marauder|gattling[-_ ]?tank|abrams|merkava|\\bmbt\\b" },
+    { "class": "wheeled", "re": "humvee|technical|dozer|rover|wheeled" },
+    { "class": "building", "re": "structure|barrack|command|factory|power|supply|oil|building|hangar|depot|bunker|\\byard\\b|\\bcenter\\b|\\bcentre\\b|derrick" }
+  ],
+  "budgets": {
+    "description": "Triangle caps are unit-validator/validate.py TRI_CAPS (lod0, lod1, lod2). Texture max edge is TEX_CAPS 2048/1024/512. Draw calls are the architecture note and do not fail the verdict while enforceDrawCalls is false. Capital ships use the ship row, the same 15000 the unit-validator uses, not the 25000 architecture line.",
+    "nearCapFraction": 0.8,
+    "enforceDrawCalls": false,
+    "byBudgetClass": {
+      "infantry": { "triangles": [3000, 1500, 500], "textureMax": [2048, 1024, 512], "drawCalls": 1 },
+      "vehicle": { "triangles": [8000, 3000, 1000], "textureMax": [2048, 1024, 512], "drawCalls": 2 },
+      "aircraft": { "triangles": [15000, 5000, 1500], "textureMax": [2048, 1024, 512], "drawCalls": 2 },
+      "ship": { "triangles": [15000, 5000, 1500], "textureMax": [2048, 1024, 512], "drawCalls": 4 },
+      "structure": { "triangles": [6000, 2500, 800], "textureMax": [2048, 1024, 512], "drawCalls": 3 }
+    }
+  },
+  "teamColour": {
+    "rendererName": "houseTint",
+    "materialNames": ["houseTint", "team_colour", "teamColour", "team-colour", "TeamColor"]
+  },
+  "tolerances": {
+    "scaleRatio": 0.5,
+    "facingYawErrorRad": 0.02,
+    "groundEpsilonM": 0.05,
+    "groundFractionOfHeight": 0.02,
+    "pivotFraction": 0.2,
+    "pivotMinM": 0.05,
+    "weldOverlapFraction": 0.08,
+    "openEdgeFraction": 0.02,
+    "weldQuantiseM": 0.01,
+    "infantryMaxHeightM": 2.2,
+    "brokenScaleRatio": 8,
+    "positionSampleCap": 200000,
+    "structuredMinScore": 100,
+    "score": {
+      "parts": 35,
+      "pivots": 15,
+      "unwelded": 10,
+      "closed": 10,
+      "scale": 8,
+      "facing": 7,
+      "ground": 5,
+      "budget": 5,
+      "teamColour": 5
+    },
+    "pivots": {
+      "turret": { "centre": ["x", "z"], "seat": "minY" },
+      "barrel": { "centre": ["x", "y"], "breech": "maxZ" },
+      "wheel": { "centre": ["y", "z"] },
+      "track": {},
+      "rotor": { "centre": ["x", "z"] },
+      "prop": { "centre": ["x", "y"] },
+      "gear": { "centre": ["x", "z"] },
+      "door": { "hinge": "x" },
+      "hatch": { "centre": ["x", "z"], "seat": "minY" },
+      "launcher": { "centre": ["x", "z"], "seat": "minY" },
+      "radar": { "centre": ["x", "z"] }
+    }
+  },
+  "classes": {
+    "tank": {
+      "label": "tank",
+      "budget": "vehicle",
+      "dimensionClass": "Tank",
+      "category": "vehicle",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body", "chassis"], "min": 1, "moving": false },
+        { "id": "turret", "patterns": ["turret"], "min": 1, "moving": true, "pivot": "turret" },
+        { "id": "barrel_recoil", "patterns": ["barrel_recoil", "recoil"], "min": 1, "moving": true, "pivot": "barrel" },
+        { "id": "barrel", "patterns": ["barrel", "gun", "cannon"], "min": 1, "moving": true, "pivot": "barrel" },
+        { "id": "locomotion", "anyOf": [
+          { "id": "track", "patterns": ["track", "tracks"], "min": 1, "moving": true, "pivot": "track" },
+          { "id": "wheel", "patterns": ["wheel", "wheels"], "min": 4, "moving": true, "pivot": "wheel" }
+        ]},
+        { "id": "sprocket", "patterns": ["sprocket"], "min": 1, "moving": true, "pivot": "wheel", "when": "track" }
+      ]
+    },
+    "wheeled": {
+      "label": "wheeled vehicle",
+      "budget": "vehicle",
+      "dimensionClass": "Humvee",
+      "category": "vehicle",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body", "chassis"], "min": 1, "moving": false },
+        { "id": "wheel", "patterns": ["wheel", "wheels"], "min": 4, "moving": true, "pivot": "wheel" }
+      ]
+    },
+    "truck": {
+      "label": "truck",
+      "budget": "vehicle",
+      "dimensionClass": "SupplyTruck",
+      "category": "vehicle",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body", "chassis", "cab"], "min": 1, "moving": false },
+        { "id": "wheel", "patterns": ["wheel", "wheels"], "min": 4, "moving": true, "pivot": "wheel" }
+      ]
+    },
+    "artillery": {
+      "label": "artillery/MRL",
+      "budget": "vehicle",
+      "dimensionClass": "Artillery",
+      "category": "vehicle",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body", "chassis"], "min": 1, "moving": false },
+        { "id": "locomotion", "anyOf": [
+          { "id": "wheel", "patterns": ["wheel", "wheels"], "min": 4, "moving": true, "pivot": "wheel" },
+          { "id": "track", "patterns": ["track", "tracks"], "min": 1, "moving": true, "pivot": "track" }
+        ]},
+        { "id": "weapon", "anyOf": [
+          { "id": "launcher", "patterns": ["launcher", "pod"], "min": 1, "moving": true, "pivot": "launcher" },
+          { "id": "barrel", "patterns": ["barrel", "gun", "cannon"], "min": 1, "moving": true, "pivot": "barrel" }
+        ]}
+      ]
+    },
+    "helicopter": {
+      "label": "helicopter",
+      "budget": "aircraft",
+      "dimensionClass": "Aircraft",
+      "category": "aircraft",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "fuselage", "body"], "min": 1, "moving": false },
+        { "id": "rotor_main", "patterns": ["rotor_main", "main_rotor"], "min": 1, "moving": true, "pivot": "rotor" },
+        { "id": "anti_torque", "anyOf": [
+          { "id": "rotor_tail", "patterns": ["rotor_tail", "tail_rotor"], "min": 1, "moving": true, "pivot": "rotor" },
+          { "id": "rotor_main", "patterns": ["rotor_main", "main_rotor"], "min": 2, "moving": true, "pivot": "rotor" }
+        ]}
+      ]
+    },
+    "jet": {
+      "label": "jet",
+      "budget": "aircraft",
+      "dimensionClass": "Aircraft",
+      "category": "aircraft",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "fuselage", "body", "airframe"], "min": 1, "moving": false },
+        { "id": "gear", "patterns": ["gear", "landing_gear", "undercarriage"], "min": 1, "moving": true, "pivot": "gear" }
+      ]
+    },
+    "ship": {
+      "label": "ship",
+      "budget": "ship",
+      "dimensionClass": "jslc.vehicle.dvora-boat",
+      "category": "naval",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body"], "min": 1, "moving": false },
+        { "id": "fit", "anyOf": [
+          { "id": "prop", "patterns": ["prop", "propeller"], "min": 1, "moving": true, "pivot": "prop" },
+          { "id": "turret", "patterns": ["turret"], "min": 1, "moving": true, "pivot": "turret" },
+          { "id": "launcher", "patterns": ["launcher"], "min": 1, "moving": true, "pivot": "launcher" },
+          { "id": "radar", "patterns": ["radar"], "min": 1, "moving": true, "pivot": "radar" }
+        ]}
+      ]
+    },
+    "submarine": {
+      "label": "submarine",
+      "budget": "ship",
+      "dimensionClass": "jslc.vehicle.seawolf-submarine",
+      "category": "naval",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body"], "min": 1, "moving": false },
+        { "id": "prop", "patterns": ["prop", "propeller"], "min": 1, "moving": true, "pivot": "prop" },
+        { "id": "hatch", "patterns": ["hatch"], "min": 1, "moving": true, "pivot": "hatch" }
+      ]
+    },
+    "infantry": {
+      "label": "infantry",
+      "budget": "infantry",
+      "dimensionClass": "Rifleman",
+      "category": "infantry",
+      "mode": "infantry",
+      "minJoints": 3,
+      "minClips": 1,
+      "staticNames": ["static"]
+    },
+    "building": {
+      "label": "building",
+      "budget": "structure",
+      "dimensionClass": "Structure",
+      "category": "building",
+      "groups": [
+        { "id": "hull", "patterns": ["hull", "body", "shell"], "min": 1, "moving": false },
+        { "id": "door", "patterns": ["door", "doors"], "min": 1, "moving": true, "pivot": "door" }
+      ]
+    },
+    "defence": {
+      "label": "defence turret",
+      "budget": "structure",
+      "dimensionClass": "DefenceTurret",
+      "category": "defense",
+      "groups": [
+        { "id": "turret", "patterns": ["turret"], "min": 1, "moving": true, "pivot": "turret" },
+        { "id": "weapon", "anyOf": [
+          { "id": "barrel", "patterns": ["barrel", "gun", "cannon"], "min": 1, "moving": true, "pivot": "barrel" },
+          { "id": "launcher", "patterns": ["launcher"], "min": 1, "moving": true, "pivot": "launcher" }
+        ]}
+      ]
+    }
+  }
+}

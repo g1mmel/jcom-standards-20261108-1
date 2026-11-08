@@ -1,0 +1,627 @@
+{
+  "$schema": "carrier-structure-v1",
+  "generated_at": "2026-10-09T02:45:25-04:00",
+  "generator": {
+    "agent_code": "cvplans",
+    "response_identity": "cvplans_gem_3.8_hi",
+    "session_id": "96c83ddf-daaf-410e-a77b-9cb90751eb43"
+  },
+  "ships": {
+    "gerald_r_ford_cvn78": {
+      "ship_name": "USS Gerald R. Ford",
+      "hull_number": "CVN-78",
+      "hull_form_family": {
+        "value": "Nimitz-class hull form",
+        "provenance_tier": "sourced-ford",
+        "citation": "Official Transcript, Senate Armed Services Committee Seapower Subcommittee, May 8 2013, p. 13; corroborated by FY2015 Navy Budget Highlights, p. 4-3",
+        "url": "https://www.armed-services.senate.gov/download/official-transcript_-seapower-subcommittee---navy-shipbuilding-programs---may-8-2013"
+      },
+      "length_overall": {
+        "value": 1106.0,
+        "unit": "ft",
+        "value_si": 337.1088,
+        "unit_si": "m",
+        "provenance_tier": "sourced-ford",
+        "citation": "USS Gerald R. Ford (CVN 78) Fact Booklet, DVIDS, p. 4; Command History",
+        "url": "https://media-cdn.dvidshub.net/pubs/pdf_51097.pdf"
+      },
+      "flight_deck_width": {
+        "value": 256.0,
+        "unit": "ft",
+        "value_si": 78.0288,
+        "unit_si": "m",
+        "provenance_tier": "sourced-ford",
+        "citation": "USS Gerald R. Ford (CVN 78) Fact Booklet, DVIDS, p. 4",
+        "url": "https://media-cdn.dvidshub.net/pubs/pdf_51097.pdf"
+      },
+      "frame_numbering_range": {
+        "start_frame": "Frame 0 (bow/FP) plus lettered frames A-K forward",
+        "end_frame": "Frame 265 (stern)",
+        "provenance_tier": "sourced-ford",
+        "citation": "USS Gerald R. Ford (CVN 78) Fact Booklet, DVIDS, p. 5",
+        "url": "https://media-cdn.dvidshub.net/pubs/pdf_51097.pdf"
+      },
+      "frame_spacing": {
+        "value": 4.0,
+        "unit": "ft",
+        "value_si": 1.2192,
+        "unit_si": "m",
+        "provenance_tier": "inferred-from:Nimitz-class",
+        "scaling_and_reasoning": "Ford reuses the Nimitz hull form. Frame numbering runs from Frame 0 to Frame 265 over 1,060 ft length between perpendiculars/extremes (265 frames * 4 ft = 1,060 ft, matching Nimitz 4-ft frame spacing proven in NAWCWD TP 8475 p. 5 and CV-67 BOGP Sheet 1).",
+        "citation": "NAWCWD TP 8475 (USS Eisenhower CVN-69), p. 5; Newport News BOGP CV-67 Sheet 1 Plate 2",
+        "url": "https://archive.org/download/DTIC_ADA386425/DTIC_ADA386425.pdf"
+      },
+      "hangar_deck_name": {
+        "value": "Main Deck (Deck 1)",
+        "provenance_tier": "sourced-ford",
+        "citation": "USS Gerald R. Ford (CVN 78) Fact Booklet, DVIDS, p. 5",
+        "url": "https://media-cdn.dvidshub.net/pubs/pdf_51097.pdf"
+      },
+      "hangar_bay_count": {
+        "value": 2,
+        "provenance_tier": "sourced-ford",
+        "citation": "USS Gerald R. Ford (CVN 78) Fact Booklet, DVIDS, p. 7; corroborated by DVIDS News 414252 (2022 Inspection)",
+        "url": "https://media-cdn.dvidshub.net/pubs/pdf_51097.pdf"
+      },
+      "hangar_division_doors": {
+        "count": 1,
+        "location_frame": {
+          "value": "Frame 150-160",
+          "provenance_tier": "inferred-from:Nimitz-class",
+          "scaling_and_reasoning": "Ford consolidated the three Nimitz bays into two larger bays by eliminating one division door, positioning the single division door between forward Bay 1 and aft Bay 2 near mid-hangar (Nimitz had doors at Frame 128 and Frame 180)."
+        }
+      },
+      "hangar_clear_height": {
+        "value": 25.0,
+        "unit": "ft",
+        "value_si": 7.62,
+        "unit_si": "m",
+        "provenance_tier": "inferred-from:Nimitz-class",
+        "scaling_and_reasoning": "Nimitz-class and prior supercarriers standard clear overhead is 25 ft (7.62 m) to accommodate carrier aircraft (F/A-18E/F, E-2D, MH-60) vertical maintenance envelopes.",
+        "citation": "NAWCWD TP 8516 / DTIC ADA432176 p. 18; NAWCWD TP 8475 p. 5",
+        "url": "https://archive.org/download/DTIC_ADA432176/DTIC_ADA432176.pdf"
+      },
+      "hangar_clear_width": {
+        "value": 108.0,
+        "unit": "ft",
+        "value_si": 32.9184,
+        "unit_si": "m",
+        "provenance_tier": "inferred-from:Nimitz-class",
+        "scaling_and_reasoning": "Direct inheritance of the Nimitz hull mold line at Main Deck level.",
+        "citation": "NAWCWD TP 8475 p. 5; Friedman U.S. Aircraft Carriers p. 320",
+        "url": "https://archive.org/download/DTIC_ADA386425/DTIC_ADA386425.pdf"
+      },
+      "hangar_length": {
+        "value": 684.0,
+        "unit": "ft",
+        "value_si": 208.4832,
+        "unit_si": "m",
+        "provenance_tier": "inferred-from:Nimitz-class",
+        "scaling_and_reasoning": "Spans Frame 64 to Frame 235 (171 frames * 4 ft = 684 ft = 208.5 m), identical longitudinal boundaries to Nimitz Main Deck hangar enclosure.",
+        "citation": "NAWCWD TP 8475 p. 4-5",
+        "url": "https://archive.org/download/DTIC_ADA386425/DTIC_ADA386425.pdf"
+      },
+      "aircraft_elevator_count": {
+        "value": 3,
+        "provenance_tier": "sourced-ford",
+        "citation": "USS Gerald R. Ford (CVN 78) Fact Booklet, DVIDS, p. 4; HII Release 2013",
+        "url": "https://media-cdn.dvidshub.net/pubs/pdf_51097.pdf"
+      },
+      "aircraft_elevator_locations": {
+        "elevator_1": {
+          "side": "Starboard",
+          "position_description": "Starboard forward of island, servicing Hangar Bay 1",
+          "frame_range": {
+            "value": "Frame 86 to 107",
+            "provenance_tier": "inferred-from:Nimitz-class/Kitty-Hawk",
+            "scaling_and_reasoning": "Positions matching starboard forward elevator 1 on Nimitz and Kitty Hawk/JFK (CV-67 BOGP Sheet 4 Plate 7)."
+          }
+        },
+        "elevator_2": {
+          "side": "Starboard",
+          "position_description": "Starboard aft of island, servicing Hangar Bay 2",
+          "frame_range": {
+            "value": "Frame 190 to 211",
+            "provenance_tier": "inferred-from:Nimitz-class/Kitty-Hawk",
+            "scaling_and_reasoning": "Matches starboard aft elevator position on Nimitz and CV-67 (CV-67 BOGP Sheet 4 Plate 7), shifted aft corresponding to Ford's smaller, aft-positioned island."
+          },
+          "platform_dimensions": {
+            "length": 85.0,
+            "width": 52.0,
+            "unit": "ft",
+            "length_si": 25.908,
+            "width_si": 15.8496,
+            "unit_si": "m",
+            "provenance_tier": "sourced-ford",
+            "citation": "Huntington Ingalls Industries Photo Release, 'Final Aircraft Elevator Installed on Gerald R. Ford (CVN 78)', Jan 2013",
+            "url": "https://www.hii.com/news/photo-release-final-aircraft-elevator-installed-on-gerald-r-ford-cvn-78"
+          }
+        },
+        "elevator_3": {
+          "side": "Port",
+          "position_description": "Port aft, servicing Hangar Bay 2",
+          "frame_range": {
+            "value": "Frame 187 to 208",
+            "provenance_tier": "inferred-from:Nimitz-class/Kitty-Hawk",
+            "scaling_and_reasoning": "Matches port aft elevator position on Nimitz (El 4) and CV-67 (El 4) clear of the landing area foul line."
+          }
+        }
+      },
+      "advanced_weapons_elevators_awe": {
+        "total_count": 11,
+        "upper_stage_count": 3,
+        "lower_stage_count": 7,
+        "utility_count": 1,
+        "rated_capacity": {
+          "value": 24000.0,
+          "unit": "lb",
+          "value_si": 10886.2,
+          "unit_si": "kg",
+          "provenance_tier": "sourced-ford",
+          "citation": "U.S. Navy Press Release, 'USS Gerald R. Ford Accepts First Advanced Weapons Elevator', Jan 2019",
+          "url": "https://www.navy.mil/Press-Office/Press-Releases/display-pressreleases/Article/2238781/uss-gerald-r-ford-accepts-first-advanced-weapons-elevator/"
+        },
+        "operating_speed": {
+          "value": 150.0,
+          "unit": "ft/min",
+          "value_si": 0.762,
+          "unit_si": "m/s",
+          "provenance_tier": "sourced-ford",
+          "citation": "U.S. Navy Press Release, 'USS Gerald R. Ford Accepts First Advanced Weapons Elevator', Jan 2019",
+          "url": "https://www.navy.mil/Press-Office/Press-Releases/display-pressreleases/Article/2238781/uss-gerald-r-ford-accepts-first-advanced-weapons-elevator/"
+        },
+        "weapons_handling_level": {
+          "deck": "02 Level",
+          "position": "Between Hangar (Main Deck 1) and Flight Deck (04 Level)",
+          "provenance_tier": "sourced-ford",
+          "citation": "U.S. Navy Press Release, Jan 2019; DVIDS News 307251"
+        },
+        "shaft_locations_by_frame": {
+          "value": null,
+          "provenance_tier": "unresolved",
+          "notes": "Exact 11 shaft coordinates remain classified/proprietary shipyard arrangement."
+        }
+      },
+      "deck_elevations_above_baseline": {
+        "flight_deck_04": {
+          "value": 97.33,
+          "unit": "ft",
+          "value_si": 29.667,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Directly matches CV-67 / Kitty Hawk 04 Level moulded elevation of 97'-4\" above baseline (BOGP Sheet 4 Plate 7), providing ~60 ft freeboard above 36'-8\" design draft (NAWCWD TP 8516 p. 7: 'height of flight deck above waterline is about 60 feet')."
+        },
+        "gallery_deck_03": {
+          "value": 87.33,
+          "unit": "ft",
+          "value_si": 26.619,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 03 Level moulded elevation of 87'-4\" above baseline (BOGP Sheet 5 Plate 8)."
+        },
+        "weapons_handling_02": {
+          "value": 78.5,
+          "unit": "ft",
+          "value_si": 23.927,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 02 Level moulded elevation of 78'-6\" above baseline (BOGP Sheet 6 Plate 9)."
+        },
+        "gallery_intermediate_01": {
+          "value": 69.5,
+          "unit": "ft",
+          "value_si": 21.184,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 01 Level moulded elevation of 69'-6\" above baseline (BOGP Sheet 7 Plate 10)."
+        },
+        "main_deck_1": {
+          "value": 60.83,
+          "unit": "ft",
+          "value_si": 18.542,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 / CVA-63 Main Deck (Hangar Floor) moulded elevation of 60'-10\" above baseline (BOGP Sheet 8 Plate 11)."
+        },
+        "second_deck_2": {
+          "value": 51.0,
+          "unit": "ft",
+          "value_si": 15.545,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 Second Deck moulded elevation of 51'-0\" above baseline (9'-10\" deck height below Main Deck)."
+        },
+        "third_deck_3": {
+          "value": 42.42,
+          "unit": "ft",
+          "value_si": 12.929,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 Third Deck moulded elevation of 42'-5\" above baseline (8'-7\" deck height below Second Deck)."
+        },
+        "fourth_deck_4": {
+          "value": 33.83,
+          "unit": "ft",
+          "value_si": 10.312,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 Fourth Deck moulded elevation of 33'-10\" above baseline (8'-7\" deck height below Third Deck)."
+        },
+        "first_platform": {
+          "value": 24.5,
+          "unit": "ft",
+          "value_si": 7.468,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 First Platform moulded elevation of 24'-6\" above baseline (9'-4\" height below Fourth Deck)."
+        },
+        "second_platform": {
+          "value": 14.0,
+          "unit": "ft",
+          "value_si": 4.267,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Matches CV-67 Second Platform moulded elevation of 14'-0\" above baseline (10'-6\" height below First Platform)."
+        },
+        "inner_bottom": {
+          "value": 5.0,
+          "unit": "ft",
+          "value_si": 1.524,
+          "unit_si": "m",
+          "provenance_tier": "inferred-from:Kitty-Hawk/CV-67",
+          "scaling_and_reasoning": "Standard US Navy aircraft carrier double bottom depth of 5 ft above baseline keel."
+        },
+        "baseline": {
+          "value": 0.0,
+          "unit": "ft",
+          "value_si": 0.0,
+          "unit_si": "m",
+          "provenance_tier": "sourced-ford",
+          "citation": "Standard naval architectural datum (bottom of flat plate keel)"
+        }
+      },
+      "transverse_bulkheads": {
+        "provenance_tier": "inferred-from:Nimitz-class/Kitty-Hawk",
+        "scaling_and_reasoning": "Because Ford reuses the Nimitz hull form and 4-ft frame grid, major transverse watertight bulkheads follow standard 16-frame (64 ft) machinery compartment intervals and 8-frame (32 ft) forward/aft subdivision intervals.",
+        "stations_by_frame": [
+          {
+            "frame": 8,
+            "type": "Collision Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 16,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 24,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 32,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 40,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 48,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 56,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 64,
+            "type": "Forward Hangar Bulkhead / Machinery Boundary",
+            "extent": "Keel to Flight Deck"
+          },
+          {
+            "frame": 80,
+            "type": "Machinery Space Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 96,
+            "type": "Machinery Space Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 112,
+            "type": "Machinery Space Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 128,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 144,
+            "type": "Machinery Space Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 160,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 180,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 195,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 210,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 225,
+            "type": "Watertight Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 235,
+            "type": "Aft Hangar Bulkhead",
+            "extent": "Keel to Flight Deck"
+          },
+          {
+            "frame": 247.5,
+            "type": "After Perpendicular (AP) Bulkhead",
+            "extent": "Keel to Main Deck"
+          },
+          {
+            "frame": 265,
+            "type": "Transom / Stern Frame",
+            "extent": "Keel to Flight Deck"
+          }
+        ]
+      },
+      "measured_from_v1": {}
+    },
+    "nimitz_class_cvn68_77": {
+      "ship_names": [
+        "Nimitz (CVN-68)",
+        "Eisenhower (CVN-69)",
+        "Vinson (CVN-70)",
+        "Roosevelt (CVN-71)",
+        "Lincoln (CVN-72)",
+        "Washington (CVN-73)",
+        "Stennis (CVN-74)",
+        "Truman (CVN-75)",
+        "Reagan (CVN-76)",
+        "Bush (CVN-77)"
+      ],
+      "hull_form": "1,040 ft LBP; 1,092 ft hull length; 134 ft beam at waterline; 252-257 ft flight deck width",
+      "frame_spacing": {
+        "value": 4.0,
+        "unit": "ft",
+        "value_si": 1.2192,
+        "unit_si": "m",
+        "citation": "NAWCWD TP 8475 (Sept 2000), p. 5: 'with each frame being 1.2 m (4 ft) on center'",
+        "url": "https://archive.org/download/DTIC_ADA386425/DTIC_ADA386425.pdf"
+      },
+      "hangar_deck": {
+        "deck_name": "Main Deck (Deck 1)",
+        "bay_count": 3,
+        "hangar_boundaries": "Frame 64 to Frame 235 (171 frames = 684 ft = 208.5 m)",
+        "clear_height": "25.0 ft (7.62 m) clear overhead; 27.5 ft (8.5 m) moulded ceiling",
+        "clear_width": "106 ft (32.3 m) to 108 ft (32.9 m)",
+        "division_doors": [
+          {
+            "door": "Division Door 1 (Bay 1 / Bay 2)",
+            "frame": 128,
+            "thickness": "2 frames (8 ft) nested",
+            "width": "76 ft wide sliding steel ballistic door"
+          },
+          {
+            "door": "Division Door 2 (Bay 2 / Bay 3)",
+            "frame": 180,
+            "thickness": "2 frames (8 ft) nested",
+            "width": "76 ft wide sliding steel ballistic door"
+          }
+        ],
+        "bay_dimensions": [
+          {
+            "bay": 1,
+            "length": "170 ft (52 m)",
+            "width": "106 ft (32 m)",
+            "height": "27.5 ft (8.5 m)",
+            "gross_volume_cuft": 495500,
+            "net_volume_cuft": 330300
+          },
+          {
+            "bay": 2,
+            "length": "208 ft (63 m)",
+            "width": "106 ft (32 m)",
+            "height": "27.5 ft (8.5 m)",
+            "gross_volume_cuft": 606300,
+            "net_volume_cuft": 337300
+          },
+          {
+            "bay": 3,
+            "length": "163 ft (50 m)",
+            "width": "106 ft (32 m)",
+            "height": "27.5 ft (8.5 m)",
+            "gross_volume_cuft": 475100,
+            "net_volume_cuft": 309000
+          }
+        ],
+        "citation": "NAWCWD TP 8475 Table 1, p. 5; NAWCWD TP 8516 p. 18-19",
+        "url": "https://archive.org/download/DTIC_ADA386425/DTIC_ADA386425.pdf"
+      },
+      "elevators": {
+        "count": 4,
+        "locations": [
+          {
+            "elevator": 1,
+            "side": "Starboard",
+            "services": "Hangar Bay 1",
+            "frame_range": "Frame 86 to 107"
+          },
+          {
+            "elevator": 2,
+            "side": "Starboard",
+            "services": "Hangar Bay 2",
+            "frame_range": "Frame 130 to 151"
+          },
+          {
+            "elevator": 3,
+            "side": "Starboard",
+            "services": "Hangar Bay 3",
+            "frame_range": "Frame 190 to 211"
+          },
+          {
+            "elevator": 4,
+            "side": "Port",
+            "services": "Hangar Bay 3",
+            "frame_range": "Frame 185 to 206"
+          }
+        ],
+        "citation": "NAWCWD TP 8516 p. 12-14; NAWCWD TP 8475 p. 4"
+      }
+    },
+    "enterprise_cvn65": {
+      "ship_name": "USS Enterprise",
+      "hull_number": "CVN-65",
+      "length_bp": "1,040 ft (316.99 m), Frame 0 to Frame 260",
+      "length_overall": "1,123 ft (342.29 m)",
+      "beam_wl": "133 ft (40.54 m)",
+      "flight_deck_width": "257 ft (78.33 m)",
+      "frame_spacing": "4'-0\" (1.2192 m) on center",
+      "hangar_deck": {
+        "deck_name": "Main Deck (Deck 1)",
+        "forward_bulkhead": "Frame 62",
+        "bay_count": 3,
+        "clear_height": "25.0 ft (7.62 m)",
+        "door_widths": "62 ft to 70 ft sliding steel doors",
+        "citation": "Detail & Scale CVN-65; Friedman U.S. Aircraft Carriers"
+      },
+      "elevators": {
+        "count": 4,
+        "locations": "Elevator 1 starboard forward, Elevator 2 starboard amidships (forward of island), Elevator 3 starboard aft of island, Elevator 4 port aft"
+      }
+    },
+    "kitty_hawk_class_cv63_67": {
+      "ship_names": [
+        "Kitty Hawk (CVA-63)",
+        "Constellation (CVA-64)",
+        "America (CVA-66)",
+        "John F. Kennedy (CV-67)"
+      ],
+      "length_bp": "990'-0\" (301.75 m), Frame 0 to Frame 247 1/2",
+      "length_overall": "1,051'-2 15/16\" flight deck; 1,072'-0 3/16\" extreme overall",
+      "flight_deck_width": "251'-6\" (CV-67); 264'-11\" (CVA-63 over walkways)",
+      "draft_design": "33'-9\" (36'-8\" full load on CV-67)",
+      "frame_spacing": "4'-0\" (1.2192 m) on center",
+      "deck_elevations_above_baseline": {
+        "flight_deck_04": "97'-4\" ABV BL",
+        "gallery_deck_03": "87'-4\" ABV BL",
+        "02_level": "78'-6\" ABV BL",
+        "01_level": "69'-6\" ABV BL",
+        "main_deck_1": "60'-10\" ABV BL",
+        "second_deck_2": "51'-0\" ABV BL (height: 9'-10\")",
+        "third_deck_3": "42'-5\" ABV BL (height: 8'-7\")",
+        "fourth_deck_4": "33'-10\" ABV BL (height: 8'-7\")",
+        "first_platform": "24'-6\" ABV BL (height: 9'-4\")",
+        "second_platform": "14'-0\" ABV BL (height: 10'-6\")",
+        "hold_inner_bottom": "~5'-0\" ABV BL",
+        "baseline": "0'-0\""
+      },
+      "hangar_deck": {
+        "deck_name": "Main Deck (Deck 1)",
+        "boundaries": "Frame 64 to Frame 235 (171 frames = 684 ft)",
+        "bay_count": 3,
+        "bay_1": "Frame 64 to Frame 128 (64 frames = 256 ft)",
+        "bay_2": "Frame 128 to Frame 180 (52 frames = 208 ft)",
+        "bay_3": "Frame 180 to Frame 235 (55 frames = 220 ft)",
+        "clear_height": "25'-0\" clear (moulded 26'-6\" / 27'-6\")",
+        "clear_width": "106'-0\""
+      },
+      "elevators": [
+        {
+          "elevator": 1,
+          "side": "Starboard",
+          "frame_range": "Frame 86 to 107 (84 ft platform)",
+          "services": "Bay 1"
+        },
+        {
+          "elevator": 2,
+          "side": "Starboard",
+          "frame_range": "Frame 113 to 134 (84 ft platform)",
+          "services": "Bay 2 (forward of island)"
+        },
+        {
+          "elevator": 3,
+          "side": "Starboard",
+          "frame_range": "Frame 190 to 211 (84 ft platform)",
+          "services": "Bay 3 (aft of island)"
+        },
+        {
+          "elevator": 4,
+          "side": "Port",
+          "frame_range": "Frame 187 to 208 (84 ft platform)",
+          "services": "Bay 3 (port aft)"
+        }
+      ],
+      "citations": [
+        "USA - CV-67 USS John F Kennedy Booklet of General Plans (2011), Newport News Shipbuilding / NAVSEA, Sheets 1, 4, 7 (Internet Archive identifier: cv67bogp2011)",
+        "USA - CVA-63 USS Kitty Hawk Booklet of General Plans (1973), Hunters Point Naval Shipyard, Sheets 2, 5, 7, 11, 19 (Internet Archive identifier: cva63bogp1973)"
+      ]
+    },
+    "midway_class_cv41": {
+      "ship_name": "USS Midway (CV-41)",
+      "length_bp": "900'-0\" (274.32 m), Frame 0 to Frame 225",
+      "flight_deck_width": "238'-0\" (post-SCB 110/110A)",
+      "frame_spacing": "4'-0\" (1.2192 m) on center",
+      "deck_hierarchy": "Flight Deck (03 Level), Gallery Deck, Main Deck (Hangar Deck 1), Second Deck, Third Deck, Fourth Deck, First Platform, Second Platform, Hold, Double Bottom",
+      "hangar_deck": {
+        "deck_name": "Main Deck (Deck 1)",
+        "clear_height": "17'-6\" original / 17'-6\" to 19'-0\" modified",
+        "bay_count": 3
+      },
+      "citation": "USA - CV-41 USS Midway Booklet of General Plans (1987), Puget Sound Naval Shipyard, Sheets 2, 5, 10, 18 (Internet Archive identifier: cv41bogp1987)"
+    },
+    "essex_class_museum": {
+      "ships": [
+        "Lexington (CV-16)",
+        "Yorktown (CV-10)",
+        "Intrepid (CV-11)",
+        "Hornet (CV-12)"
+      ],
+      "length_bp": "820'-0\" (249.94 m), Frame 0 to Frame 205",
+      "frame_spacing": "4'-0\" (1.2192 m) on center",
+      "deck_elevations_above_baseline": {
+        "flight_deck": "~71'-6\" ABV BL",
+        "main_deck_hangar": "54'-6 1/4\" ABV BL",
+        "second_deck": "46'-6\" ABV BL (height: 8'-0 1/4\")",
+        "third_deck": "38'-0\" ABV BL (height: 8'-6\")",
+        "fourth_deck": "30'-7 1/4\" ABV BL (height: 7'-4 3/4\")",
+        "first_platform": "~23'-0\" ABV BL",
+        "second_platform": "~15'-0\" ABV BL",
+        "inner_bottom": "Baseline 0'-0\""
+      },
+      "hangar_clear_height": "17'-6\" clear overhead",
+      "citations": [
+        "USA - CVA-16 USS Lexington Booklet of General Plans (1965), Sheet 19 Type Sections (Internet Archive identifier: cva16bogp1965)",
+        "USA - CVS-10 USS Yorktown Booklet of General Plans (195X), Sheet 3 Inboard Profile (Internet Archive identifier: cvs10bogp195x)",
+        "USA - CVA-11 USS Intrepid General Arrangement Details (1954), NYNSY (Internet Archive identifier: cva11gad1954)",
+        "USA - CV-12 / CVS-12 USS Hornet General Arrangement (1947 & 19XX) (Internet Archive identifier: cv12gad1947, cvs12bogp19xx)"
+      ]
+    }
+  }
+}
